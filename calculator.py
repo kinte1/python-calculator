@@ -37,10 +37,12 @@ while True:
     except ZeroDivisionError:
         print("CANNOT DIVIDE BY ZERO")
 
-option1 = "no"
-option2 = "yes"
-calculate_again = input("DO YOU WANT ANOTHER CALCULATION? (yes/no): ")
-if calculate_again != option1, option2:
-    print("INVALID")
-    break
+    while True:
+        calculate_again = input("DO YOU WANT ANOTHER CALCULATION? (yes/no): ")
+        if calculate_again in ["yes", "no"]:
+            break
+        else:
+            print("INVALID OPTION: OPTIONS ARE (yes OR no)")
+    if calculate_again == "no":
+        break
         
